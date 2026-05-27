@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { BellRing, ClipboardList, Layers, QrCode, ShoppingBag, Store, ToggleRight } from "lucide-react";
+import { BellRing, ClipboardList, QrCode, ShoppingBag, ToggleRight } from "lucide-react";
 import { AudienceModeToggleCompact, useAudienceMode } from "./AudienceMode";
 
 const content = {
@@ -25,21 +25,6 @@ const content = {
         icon: ToggleRight,
         title: "Live Availability",
         description: "Mark items available or out of stock instantly, without reprinting your menu.",
-      },
-      {
-        icon: Store,
-        title: "Made For Small Shops",
-        description: "Ideal for roadside cafes, food trucks, tea stalls, kiosks, and takeaway counters.",
-      },
-      {
-        icon: Layers,
-        title: "Multiple Menus",
-        description: "Keep breakfast, snacks, lunch, or seasonal menus ready and switch when needed.",
-      },
-      {
-        icon: ShoppingBag,
-        title: "Ordering Optional",
-        description: "Start with only a menu. Move to table ordering later if your business grows into it.",
       },
     ],
   },
@@ -68,16 +53,6 @@ const content = {
         icon: BellRing,
         title: "Waiter & Bill Requests",
         description: "Customers can call a waiter or request the bill from the QR menu.",
-      },
-      {
-        icon: Store,
-        title: "Team Views",
-        description: "Give owners, waiters, and cooks the right screen without enterprise POS complexity.",
-      },
-      {
-        icon: Layers,
-        title: "Flexible Menus",
-        description: "Create breakfast, lunch, dinner, or event menus and switch the active one when service changes.",
       },
     ],
   },
