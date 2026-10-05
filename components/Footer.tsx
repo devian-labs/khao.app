@@ -33,7 +33,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 border-t border-zinc-100 dark:border-zinc-900 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-zinc-500 dark:text-zinc-500">
-          <p>© 2026 Khao — a product of <a href="https://devian.app" target="_blank" rel="noopener noreferrer" className="text-red-600 dark:text-red-400 hover:underline font-medium">Devian Labs</a>. Designed for small vendors.</p>
+          <p>© 2026 Khao — a product of <a href="https://devianlabs.com" target="_blank" rel="noopener noreferrer" className="text-red-600 dark:text-red-400 hover:underline font-medium">Devian Labs</a>. Designed for small vendors.</p>
           <p>Made with care in India 🇮🇳</p>
         </div>
       </div>

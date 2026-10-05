@@ -1,14 +1,20 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { pageMetadata } from "@/lib/site";
+import { breadcrumb } from "@/lib/structured-data";
 
-export const metadata: Metadata = {
-  title: "Terms of Service — Khao",
-  description: "Terms of Service for using the Khao app and website.",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "Terms of Service – QR Menu & Table Ordering App",
+  description:
+    "Terms of Service for Khao, the QR menu and table ordering app for Indian food businesses: accounts, subscriptions, billing, acceptable use and liability.",
+  path: "/terms",
+});
 
 export default function TermsPage() {
   return (
     <div className="min-h-screen bg-white dark:bg-zinc-950">
+      <JsonLd data={breadcrumb("Terms of Service", "/terms")} />
       <div className="mx-auto max-w-3xl px-6 py-20 lg:px-8">
         <Link href="/" className="text-sm text-zinc-500 hover:text-red-600 dark:hover:text-red-400 transition-colors mb-10 inline-block">
           ← Back to Khao

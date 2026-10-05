@@ -1,15 +1,21 @@
 import Link from "next/link";
 import { Mail, MessageCircle } from "lucide-react";
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { pageMetadata } from "@/lib/site";
+import { breadcrumb } from "@/lib/structured-data";
 
-export const metadata: Metadata = {
-  title: "Contact & Support — Khao",
-  description: "Get help with Khao. Contact the Khao support team.",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "Contact & Support for QR Menu and Table Ordering",
+  description:
+    "Get help with Khao, the QR menu and table ordering app. Email support@khao.app for billing, account and bug reports, or Devian Labs for partnerships.",
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white dark:bg-zinc-950">
+      <JsonLd data={breadcrumb("Contact & Support", "/contact")} />
       <div className="mx-auto max-w-2xl px-6 py-20 lg:px-8">
         <Link href="/" className="text-sm text-zinc-500 hover:text-red-600 dark:hover:text-red-400 transition-colors mb-10 inline-block">
           ← Back to Khao
@@ -73,7 +79,7 @@ export default function ContactPage() {
 
         <p className="mt-10 text-sm text-zinc-400 dark:text-zinc-600">
           Khao is a product of{" "}
-          <a href="https://devian.app" target="_blank" rel="noopener noreferrer" className="text-red-600 dark:text-red-400 hover:underline">
+          <a href="https://devianlabs.com" target="_blank" rel="noopener noreferrer" className="text-red-600 dark:text-red-400 hover:underline">
             Devian Labs
           </a>
           , India.

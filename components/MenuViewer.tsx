@@ -288,7 +288,7 @@ export default function MenuViewer({ shopId }: { shopId: string }) {
         <div className={`flex mb-5 ${isCenter ? 'flex-col items-center justify-center text-center' : 'flex-row items-center justify-start text-left'} gap-3`}>
           {shopData?.logoUrl ? (
             <div className={`relative ${isCenter ? 'w-16 h-16' : 'w-12 h-12 shrink-0'} rounded-xl overflow-hidden`} style={{ backgroundColor: 'var(--theme-search)', border: '1px solid var(--theme-border)' }}>
-              <Image src={shopData.logoUrl} alt="Logo" fill className="object-cover" />
+              <Image src={shopData.logoUrl} alt={`${shopData.name} logo`} fill className="object-cover" />
             </div>
           ) : (
             <UtensilsCrossed className={`${isCenter ? 'w-8 h-8' : 'w-6 h-6 shrink-0'}`} style={{ color: primaryColor }} />

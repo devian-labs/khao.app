@@ -121,9 +121,12 @@ function AFrameSign() {
       {/* Poster image */}
       <img
         src="/qr-menu-poster.png"
-        alt="Breakfast Shop QR menu"
+        alt="Printed Khao QR code menu poster for a breakfast shop"
+        width={774}
+        height={1004}
         style={{
           width: "100%",
+          height: "auto",
           borderRadius: 12,
           boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
           display: "block",

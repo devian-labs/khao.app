@@ -1,14 +1,20 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { pageMetadata } from "@/lib/site";
+import { breadcrumb } from "@/lib/structured-data";
 
-export const metadata: Metadata = {
-  title: "Refund & Cancellation Policy — Khao",
-  description: "Refund and cancellation policy for Khao subscriptions.",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "Refund & Cancellation Policy for Subscriptions",
+  description:
+    "How to cancel a Khao QR menu or table ordering subscription on Google Play or the App Store, what happens after cancellation, and when refunds apply.",
+  path: "/refund-policy",
+});
 
 export default function RefundPolicyPage() {
   return (
     <div className="min-h-screen bg-white dark:bg-zinc-950">
+      <JsonLd data={breadcrumb("Refund & Cancellation Policy", "/refund-policy")} />
       <div className="mx-auto max-w-3xl px-6 py-20 lg:px-8">
         <Link href="/" className="text-sm text-zinc-500 hover:text-red-600 dark:hover:text-red-400 transition-colors mb-10 inline-block">
           ← Back to Khao

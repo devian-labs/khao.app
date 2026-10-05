@@ -85,7 +85,9 @@ export default function HeroSection() {
               <AudienceModeToggle />
             </div>
 
-            <AnimatePresence mode="wait">
+            {/* initial={false}: server HTML renders the H1/copy fully visible
+                (LCP); the fade only runs when the audience mode is switched. */}
+            <AnimatePresence mode="wait" initial={false}>
               <motion.div key={mode} {...fade}>
                 <h1 className="font-display font-extrabold tracking-tight text-[#121212]">
                   <span className="block text-5xl sm:text-6xl lg:text-[4.5rem] leading-[1.05] text-[#DC2626]">{c.accent}</span>
@@ -135,7 +137,7 @@ export default function HeroSection() {
           </div>
 
           {/* ── Right: illustration — menu mode gets dedicated component ── */}
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="wait" initial={false}>
             {mode === "menu" ? (
               <motion.div key="menu-illustration" {...fade} className="relative mx-auto w-full max-w-[480px] lg:mx-0 lg:ml-auto">
                 <MenuModeIllustration />

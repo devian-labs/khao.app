@@ -1,14 +1,20 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { pageMetadata } from "@/lib/site";
+import { breadcrumb } from "@/lib/structured-data";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy — Khao",
-  description: "Privacy Policy for the Khao app and website.",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "Privacy Policy – QR Menu & Table Ordering App",
+  description:
+    "How Khao collects, uses, stores and protects your data when you use its QR menu and table ordering app and website, and the rights you have.",
+  path: "/privacy-policy",
+});
 
 export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen bg-white dark:bg-zinc-950">
+      <JsonLd data={breadcrumb("Privacy Policy", "/privacy-policy")} />
       <div className="mx-auto max-w-3xl px-6 py-20 lg:px-8">
         <Link href="/" className="text-sm text-zinc-500 hover:text-red-600 dark:hover:text-red-400 transition-colors mb-10 inline-block">
           ← Back to Khao
